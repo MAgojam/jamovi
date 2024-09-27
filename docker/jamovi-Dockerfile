@@ -176,6 +176,8 @@ RUN jmc --install . --to /usr/lib/jamovi/modules --rhome $R_HOME --rlibs /usr/li
 WORKDIR /tmp/source
 RUN git clone https://github.com/davidfoxcroft/lsj-data.git /usr/lib/jamovi/modules/lsj-data
 RUN git clone https://github.com/jamovi/r-datasets.git /usr/lib/jamovi/modules/r-datasets
+RUN git clone https://github.com/MAgojam/jReshape.git
+RUN jmc --install jReshape --to /usr/lib/jamovi/modules --rhome $R_HOME --rlibs /usr/lib/jamovi/modules/base/R
 
 
 ##### I18N #####
